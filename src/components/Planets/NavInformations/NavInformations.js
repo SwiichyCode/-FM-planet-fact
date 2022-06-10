@@ -21,8 +21,6 @@ export default function NavInformations({ planets }) {
     },
   ];
 
-  // const activeClassName = "activeClassName";
-
   return (
     <NavInformationsWrapper>
       {navItems.map(({ text, routes, className }, index) => (
