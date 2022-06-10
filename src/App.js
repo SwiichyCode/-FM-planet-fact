@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
 
-function App() {
+import Header from "./components/Header/Header/Header";
+import Planet from "./components/Planets/Planet/Planet";
+import background from "./assets/background-stars.svg";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header />
+      <Planet />
+    </Container>
   );
 }
 
-export default App;
+const Container = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&display=swap");
+  width: 100%;
+  height: 100vh;
+  background: var(--primary-black);
+  background-image: url(${background});
+  background-size: cover;
+  overflow: hidden;
+  font-family: "Antonio", sans-serif;
+  font-weight: 400;
+`;
