@@ -17,5 +17,9 @@ export const PlanetWrapper = styled.div`
     justify-content: center;
     align-items: center;
     height: 100%;
+
+    @media (max-width: 768px) {
+      height: 100%;
+    }
   }
 `;

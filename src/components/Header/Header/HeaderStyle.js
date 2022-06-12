@@ -7,6 +7,11 @@ export const HeaderWrapper = styled.header`
   height: 100%;
   max-height: 85px;
 
+  @media (max-width: 768px) {
+    max-height: initial;
+    height: auto;
+  }
+
   .header-items {
     height: 100%;
     display: flex;
@@ -14,6 +19,10 @@ export const HeaderWrapper = styled.header`
     justify-content: space-between;
     box-sizing: border-box;
     padding: 0 ${px2vw(40)} 0 ${px2vw(32)};
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   .header-line {

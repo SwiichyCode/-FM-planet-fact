@@ -24,4 +24,9 @@ const Container = styled.div`
   overflow: hidden;
   font-family: "Antonio", sans-serif;
   font-weight: 400;
+
+  @media (max-width: 768px) {
+    overflow: initial;
+    height: 100%;
+  }
 `;

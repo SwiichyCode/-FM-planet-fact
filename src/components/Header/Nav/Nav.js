@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { NavWrapper } from "./NavStyle";
 
 export default function Nav() {
@@ -14,21 +14,12 @@ export default function Nav() {
     { text: "neptune", routes: "neptune/overwiew" },
   ];
 
-  const activeClassName = "activeClassName";
-
   return (
     <NavWrapper>
       <ul>
         {navItems.map(({ text, routes }, index) => (
           <li key={index}>
-            <NavLink
-              to={`/${routes}`}
-              className={({ isActive }) =>
-                isActive ? activeClassName : undefined
-              }
-            >
-              {text}
-            </NavLink>
+            <Link to={`/${routes}`}>{text}</Link>
           </li>
         ))}
       </ul>

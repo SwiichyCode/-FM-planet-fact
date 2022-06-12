@@ -5,25 +5,34 @@ export const NavInformationsWrapper = styled.ul`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: ${px2vw(350)};
-  gap: ${px2vw(16)};
-  margin-top: ${px2vw(39)};
+  max-width: 350px;
+  gap: 16px;
+  margin-top: 39px;
   font-family: "League Spartan", sans-serif;
+
+  @media (max-width: 768px) {
+    width: 281px;
+    margin-left: 1em;
+  }
 
   a {
     display: flex;
     align-items: center;
     width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    padding: ${px2vw(12)} 0 ${px2vw(11)} 0;
+    padding: 12px 0 11px 0;
 
     font-weight: 700;
-    font-size: ${px2vw(12)};
-    line-height: ${px2vw(25)};
+    font-size: 12px;
+    line-height: 25px;
     letter-spacing: ${px2vw(2.57)};
     text-transform: uppercase;
     color: #ffffff;
     text-decoration: none;
+
+    @media (max-width: 768px) {
+      font-size: 9px;
+    }
 
     span {
       padding: 0 ${px2vw(28)};

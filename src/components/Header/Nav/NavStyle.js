@@ -4,17 +4,21 @@ import px2vw from "../../../utils/px2vw";
 export const NavWrapper = styled.nav`
   width: auto;
   height: 100%;
-  max-height: ${px2vw(25)};
+  max-height: 25px;
+
+  @media (max-width: 768px) {
+    padding-bottom: 24px;
+  }
 
   ul {
     height: 100%;
     display: flex;
-    gap: 0 ${px2vw(33)};
+    gap: 0 33px;
 
     font-family: "Spartan", sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: ${px2vw(11)};
+    font-size: 11px;
     line-height: ${px2vw(25)};
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -61,6 +65,10 @@ export const NavWrapper = styled.nav`
 
     a:hover::after {
       width: 100%;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
 
     .activeClassName::after {
